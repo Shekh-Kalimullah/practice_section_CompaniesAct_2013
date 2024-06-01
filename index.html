@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .accounting-standard {
+      background-color: aqua;
+      height: 100px;
+      width: 500px;
+      color: black;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      border: solid 3px black;
+      margin-top: 100px;
+    }
+    .div-width{
+      width: 700px;
+    }
+  .accounting-standard-button-practice{
+    background-color: #000300;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: White;
+
+  }
+  </style>
+</head>
+<body>
+ 
+  <button class="accounting-standard-button-practice" onclick="
+    writeAccountingStandard();
+    
+    "><b>Practice Sections Of Companies Act, 2013</b></button>
+
+    <div class="js-output accounting-standard"></div>
+  <script>
+
+let divElement = document.querySelector('.js-output');
+function writeAccountingStandard() {
+  let randomNumber = Math.floor(Math.random()*148);
+ let sectionInterpretation = prompt(`As per Section(${randomNumber}) of the Companies Act, 2013`);
+ 
+
+ 
+sectionDescription = `Section(${randomNumber}) of the Companies Act, 2013 == ${sectionInterpretation.toUpperCase()}`;
+divElement.innerHTML = sectionDescription;
+  if(randomNumber == 6 || randomNumber == 8) {
+    console.log('This AS has been removed.')
+  }else if( randomNumber == 0) {
+    divElement.innerHTML = 'This As has been removed';
+  }else if(randomNumber == 4 || randomNumber == 23) {
+    divElement.classList.add('div-width')
+  }
+}
+
+
+  </script>
+</body>
+</html>
